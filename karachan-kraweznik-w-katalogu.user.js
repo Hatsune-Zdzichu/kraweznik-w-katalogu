@@ -2,7 +2,7 @@
 // @name		karachan krawężnik w katalogu
 // @version		1
 // @grant		none
-// @match		https://karachan.org/*/catalog.html
+// @match		https://karachan.org/*
 // ==/UserScript==
 
 (() => {
