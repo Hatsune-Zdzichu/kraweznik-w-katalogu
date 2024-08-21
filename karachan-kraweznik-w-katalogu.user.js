@@ -13,7 +13,7 @@
 
 		allThreads = [...document.querySelectorAll('#threads > div.thread')];
 		hiddenThreads = [];
-		Object.keys(localStorage)
+		Object.keys(window.localStorage)
 			.filter(e => e.startsWith(boardPrefix))
 			.forEach(e => {
 				const thread = document.getElementById(`thread-${e.substring(boardPrefix.length)}`);
@@ -48,7 +48,7 @@
 		const a = document.createElement('a');
 		const meta = thread.querySelector('.meta');
 		meta.appendChild(a);
-		a.innerText = bool ? ' [ - ] ' : ' [ + ] ';
+		a.innerText = bool ? ' [ – ] ' : ' [ + ] ';
 		a.addEventListener('click', () => {
 			hideElement(thread, true);
 			meta.removeChild(a);
